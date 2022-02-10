@@ -17,6 +17,11 @@ color:#fff;
 background:#00ffea;
 }
 
+body{
+overflow-x:hidden; 
+overflow-y:auto;
+}
+
 
 body::-webkit-scrollbar { width: 15px; /* width of the entire scrollbar */ } body::-webkit-scrollbar-track { background:#000; /* color of the tracking area */ } body::-webkit-scrollbar-thumb { background:#00ffea; /* color of the scroll thumb */ border-radius:10px; /* roundness of the scroll thumb */ border:1px solid white; /* creates padding around scroll thumb */ }
 
@@ -32,6 +37,7 @@ background:#20221f;
 .navbar-brand{
 text-spacing:1px;
 font-weight:600;
+font-size:20px;
 }
 .navbar-toggler{
 outline:none;
@@ -51,6 +57,7 @@ border-color:#00ffea;
 padding:7px;
 border-width:3px;
 color:#00ffea;
+height:40px;
 }
 #nav-btn:hover{
 background:#00ffea;
@@ -135,6 +142,8 @@ padding-top:5%;
 }
 
 
+
+
 /* Header css */
 #header{
 background:#000;
@@ -169,6 +178,10 @@ background:#000;
 .carousel-item{
 border-radius:60px;
 }
+.carousel-item img{
+border-radius:10px;
+}
+
 @media screen and (max-width: 2008px) {
 .carousel{
 margin-right:2.3rem;
@@ -212,6 +225,7 @@ padding:20px;
 }
 #dest_font{
 color:#fff;
+font-weight:500;
 }
 .card{
 width:18rem;
@@ -262,7 +276,7 @@ width:90%;
 background:#20221f;
 }
 #friend_iframe{
-height:120vh;
+height:180vh;
 width:100%;
 }
 
@@ -281,8 +295,6 @@ width:100%;
 #about_div{
 width: 99%;
 box-shadow:10px 10px 10px #fff;
-justify-content:center;
-display:flex;
 background:#20221f;
 padding:10px;
 color:#fff;
@@ -295,6 +307,69 @@ background:#00ffea;
 color:#000;
 }
 
+#about_text{
+box-shadow:10px 10px 10px #fff;	
+}
+
+
+
+/* Final section css */
+
+#final_container{
+background:url("g-9.jpg"),rgba(0,0,0,0.7);
+background-blend-mode:darken;
+background-repeat:no-repeat;
+background-size:100% 110%;
+height:55vh;
+width:90%;
+align-items:center;
+justify-content:center;
+}
+
+@media screen and (min-width: 768px) {
+#final_container{
+height:80vh;
+}
+}
+
+
+#final_container h6{
+color:#00ffea;
+font-weight:900;
+}
+
+#final_container h6,h7,h1{
+font-family:fantasy;
+}
+
+#final_container h1{
+font-weight:600;
+}
+
+#final_container h7{
+font-weight:600;
+}
+
+#final{
+background:#20221f;
+}
+
+
+
+
+/* map css */
+
+#map_sec{
+background:#000;
+}
+
+#map_div{
+background:#20221f;
+}
+
+#map_div iframe{
+border-radius:20px;
+}
 
 
 
@@ -315,7 +390,6 @@ footer p span{
   color: var(--customColor);
 }
 
-/* Footer CSS */
 .footer__container {
   background-color: #131313;
   padding: 5rem 0;
@@ -402,7 +476,7 @@ footer p span{
   color: #fff;
 }
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 1820px) {
   .footer__links {
     padding-top: 2rem;
   }
@@ -437,6 +511,68 @@ footer p span{
 
 /* Go to top button css */
 
-#myBtn{display:none;position:fixed;bottom:8px;right:10px;border-radius:100px;	z-index:99;height:38px;width:38px;cursor:pointer;padding:0px;background-color:#00ffea;border-color:transparent;
+#myBtn{display:none;position:fixed;bottom:8px;right:10px;border-radius:100px;	z-index:99;height:38px;width:38px;cursor:pointer;padding:0px;background-color:#00ffea;border-color:transparent;box-shadow:1px 1px 10px #fff;
+}					
 
-		}					
+
+
+
+
+/* CSS for displaying alert when tge screen height is less then 496px */
+
+@keyframes rog {
+  0% {
+    transform:rotate(0deg);
+  }
+
+  100% {
+    transform:rotate(360deg);
+  }
+}
+
+@media screen and (max-height:496px) {
+ #alert-div{
+ 	display:block;
+}
+} 
+
+@media screen and (max-height:496px) {
+ body{
+ 	background:#000;
+}
+} 
+
+
+@media screen and (min-height:496px) {
+ #alert-div{
+ 	display:none;
+}
+} 
+
+@media screen and (max-height:496px) {
+ #main{
+ 	display:none;
+}
+} 
+
+
+
+/* Website Preloader CSS */
+
+
+
+#loading {
+background: url('final.gif') no-repeat center center; position:fixed;
+height: 100%;
+width: 100%;
+z-index:9999999;
+background-color:#000;
+background-size:100% 30%;
+display:none;
+}
+
+@media screen and (min-width:768px) {
+#loading {
+ background-size:50% 40%;
+}
+} 
