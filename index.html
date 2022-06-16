@@ -14,8 +14,11 @@
 </head>
 <body bgcolor="black" onload="hello()">
 			
+<div id="loader">
 <div id="loading"></div>
-			
+</div>
+
+
 <!-- Content displayed screen less than 496px -->
 
 <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);height:85vh;width:75%;" id="alert-div">
@@ -28,7 +31,7 @@ This website will not work devices have a screen height under 496px,
 which means website is not for small devices, try medium or large devices.
 <br><br><br>
 <center>
-<a href="https://abp2.github.io/res6" style="background:#fff;text-decoration:none;border:3px solid cyan;border-radius:10px;padding:5px;box-shadow:5px 5px 30px cyan;color:#000;">
+<a href="https://abtp2.github.io/res6" style="background:#fff;text-decoration:none;border:3px solid cyan;border-radius:10px;padding:5px;box-shadow:5px 5px 30px cyan;color:#000;">
 <font size="3" style="">
 Contact Developer
 </font>
@@ -48,8 +51,7 @@ Contact Developer
 
 
 <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
-<ul class="navbar-nav mx-auto mb-2 mb-lg-0"> <li class="nav-item"> <a class="nav-link active" aria-current="page" href="index.html" id="nav_link" style="background-color:#00ffea;
-border-radius:10px;">Home</a> </li> 
+<ul class="navbar-nav mx-auto mb-2 mb-lg-0"> <li class="nav-item"> <a class="nav-link active" aria-current="page" href="index.html" id="nav_link" style="background-color:#00ffea;border-radius:10px;" title="home">Home</a> </li> 
 
   <li class="nav-item"> 
   <a class="nav-link text-light" href="gallery.html" id="nav_link">Gallery</a>
@@ -278,7 +280,7 @@ border-radius:10px;">Home</a> </li>
 	Our Team
 	</h1>
 	<div class="container" id="friend_container">
-		<iframe src="https://abp2.github.io/car" id="friend_iframe" data-aos="fade-right" data-aos-duration="1000" class="mb-4">
+		<iframe src="https://abtp2.github.io/car" id="friend_iframe" data-aos="fade-right" data-aos-duration="1000" class="mb-4">
 		</iframe>
 	</div>
 </section>
@@ -316,6 +318,7 @@ Let's explore this world
 </center>			
 
 
+
 <section id="map_sec">
 			
 <h1 class="text-center pt-5" id="dest_font">
@@ -324,7 +327,7 @@ Map To Visit
 	
 <center>
 <div class="py-4 px-4" id="map_div">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3549.400553310003!2d78.0421422!3d27.175144799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39747121d702ff6d%3A0xdd2ae4803f767dde!2sTaj%20Mahal!5e0!3m2!1sen!2sus!4v1634664921308!5m2!1sen!2sus" width="90%" height="250" data-aos="zoom-in" data-aos-duration="1000"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3471.531446943956!2d78.7746603!3d29.5300138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390a24ffffffffff%3A0x3017b72d3d253fd7!2sJim%20Corbett%20National%20Park!5e0!3m2!1sen!2sin!4v1644582453803!5m2!1sen!2sin" width="90%" height="250" data-aos="zoom-in" data-aos-duration="1000" id="map"></iframe>
 </div>
 </center>
 </section>
@@ -414,7 +417,7 @@ Map To Visit
 	 alert( "Welcome " + a + " to my website");
 	 }
 	 else{
-	 	window.location.href = "https://abp2.github.io/res6";
+	 	window.location.href = "https://abtp2.github.io/res6";
 	 }
 	}
 </script>
@@ -450,14 +453,22 @@ function scrollFunction() {
   
 <script> 			
 setTimeout(function loadingcheck(){
-document.getElementById('loading').style.display = 'block'; },0);
+document.getElementById('loading').style.display = 'flex'; },0);
  </script>
-
-
+ 
+ 
+<!--  
 <script>
 setTimeout(function loadingcheck(){ 
 document.getElementById('loading').style.display = 'none'; },6000); 
 </script>
-</style>
+-->
+
+<script> 			
+setTimeout(function check(){
+document.getElementById('loader').style.display = 'flex'; },0);
+setTimeout(function check(){ 
+document.getElementById('loader').style.display = 'none'; },9000); 
+</script>
 </body>
 </html>

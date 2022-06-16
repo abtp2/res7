@@ -64,6 +64,11 @@ background:#00ffea;
 color:#fff;
 }
 
+#nav_link{
+box-shadow:2px 2px 10px #fff;
+border-radius:10px;
+}
+
 
 @media screen and (min-width: 480px) {
 #nav-btn{
@@ -79,10 +84,31 @@ margin-left:2rem;
 }
 
 
-@media screen and (max-width: 768px) {
-
+@media screen and (max-width: 575px) {
+[title~=home]{
+margin-top:1rem;
+}
+#nav_link{
+padding-left:10px;
+margin-top:0.5rem;
+}
+#nav-btn{
+display:flex;
+}
 }
 
+
+@media screen and (min-width: 575px) {
+#nav_link{
+margin-right:0.8rem;
+}
+}
+
+@media (min-width: 575px) and (max-width: 830px) {
+#nav-btn{
+display:none;
+}
+}
 
 
 /* Hero section css*/
@@ -102,7 +128,7 @@ margin-top:2rem;
 position:relative;
 }
 #main_hero img{
-height:100vh;
+height:100%;
 width:90%;
 margin-top:2rem;
 }
@@ -560,15 +586,15 @@ footer p span{
 /* Website Preloader CSS */
 
 
-
+/* 
 #loading {
 background: url('final.gif') no-repeat center center; position:fixed;
-height: 100%;
+height: 100vh;
 width: 100%;
-z-index:9999999;
 background-color:#000;
 background-size:100% 30%;
 display:none;
+z-index:9999999999999;
 }
 
 @media screen and (min-width:768px) {
@@ -576,3 +602,102 @@ display:none;
  background-size:50% 40%;
 }
 } 
+ */
+ 
+ 
+
+#loader{
+width:100%;
+height:100vh;
+background:#000;
+z-index:9999999999999999999;
+position:fixed;
+left:0;
+bottom:0;
+top:0;
+display:none;
+align-items:center;
+justify-content:center;
+animation:loadada 9s linear;
+}
+@keyframes loadada{
+0%{
+opacity:1;
+}
+10%{
+opacity:1;
+}
+20%{
+opacity:1;
+}
+30%{
+opacity:1;
+}
+40%{
+opacity:1;
+}
+50%{
+opacity:1;
+}
+60%{
+opacity:1;
+}
+70%{
+opacity:0.8;
+}
+85%{
+opacity:0.5;
+}
+100%{
+opacity:0;
+}
+}
+
+
+
+#loading{
+width:70px;
+height:70px;
+align-items:center;
+justify-content:center;
+border:10px solid #ffffff;
+border-radius:1000px;
+border-top:10px solid #00ffea;
+border-bottom:10px solid #00ffea;
+border-left:10px solid #00ffea;
+animation:loadidi 2s linear infinite;
+position:relative;
+}
+@keyframes loadidi{
+from{
+transform:rotate(0deg);
+}
+to{
+transform:rotate(360deg);
+}
+}
+
+
+@media screen and (min-width: 768px) {
+#loading{
+width:110px;
+height:110px;
+border:15px solid #fff;
+border-radius:10000px;
+border-top:15px solid #00ffea;
+border-bottom:15px solid #00ffea;
+border-left:15px solid #00ffea;
+}
+}
+
+
+#map{
+border:5px solid #fff;	
+}
+
+@media screen and (min-width: 768px) {
+#map{
+border:8px solid #fff;	
+}
+
+}
